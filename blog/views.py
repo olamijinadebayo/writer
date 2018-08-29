@@ -24,7 +24,7 @@ class DeleteArticle(DeleteView):
     
     def dispatch(self, request, *args, **kwargs):
         if not request.user.is_staff or request.user.is_admin:
-            return HttpResponseBadRequest('You are not allowed to past these items')
+            return HttpResponseBadRequest('You are not allowed to delete these items')
         return super(DeleteArticle, self).dispatch(request, *args, **kwargs)
 
 
