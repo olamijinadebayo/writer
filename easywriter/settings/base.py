@@ -167,7 +167,7 @@ ACCOUNT_SIGNUP_FORM_CLASS = 'accounts.forms.SignupForm'
 
 LOGIN_REDIRECT_URL = '/'
 
-ACCOUNT_LOGOUT_REDIRECT_URL = 'accounts/login'
+ACCOUNT_LOGOUT_REDIRECT_URL = '/accounts/login'
 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
