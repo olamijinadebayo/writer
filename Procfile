@@ -1,1 +1,1 @@
-web: gunicorn real_estate_api.wsgi --pythonpath easywriter
+web: gunicorn easywriter.wsgi --pythonpath easywriter
