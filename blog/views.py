@@ -1,5 +1,6 @@
 from django.views.generic import ListView, DetailView, DeleteView
 from django.http import HttpResponseBadRequest
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 from .models import Article
 
@@ -20,7 +21,7 @@ class ArticleDetail(DetailView):
     def get_context_data(self):
         pass
 
-class DeleteArticle(DeleteView):
+class DeleteArticle(LoginRequiredMixin, DeleteView):
     
     def dispatch(self, request, *args, **kwargs):
         if not request.user.is_staff or request.user.is_admin:
